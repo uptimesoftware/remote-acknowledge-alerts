@@ -1,5 +1,5 @@
-# Server Performance Metrics
-## Tags : plugin   deprecated  
+# SharePoint 2010 Monitor
+## Tags : plugin   sharepoint   microsoft  
 
 ## Category: plugin
 
@@ -7,23 +7,19 @@
 
 
   
-    * Server Performance Metrics 1.1 - 5.5, 5.4, 5.3
-  
-
-  
-    * Server Performance Metrics 1.0 - 5.3
+    * SharePoint 2010 Monitor 1.0 - 7.2, 7.1, 7.0, 6.0
   
 
 
-### Description: Monitor core system metrics. This is now in up.time 6 as the built-in Performance check monitor. Please use the Performance Monitor in up.time 6+ for this functionality instead.
+### Description: This plugin monitors the performance of SharePoint 2010 and newer. This is only supported on a Windows Monitoring Station.
 
-### Supported Monitoring Stations: 7.2, 7.1
+### Supported Monitoring Stations: 7.2, 7.1, 7.0, 6.0
 ### Supported Agents: None; no agent required
-### Installation Notes: <p>Manual copy into "core" directory</p>
+### Installation Notes: <p><a href="https://github.com/uptimesoftware/uptime-plugin-manager">Install using the up.time Plugin Manager</a></p>
 
 ### Dependencies: <p>n/a</p>
 
-### Input Variables: * none; retrieves latest values from up.time database internally via uptime core
-### Output Variables: * Free Memory (KB)* Free Swap (KB)* Free Memory (%)* CPU Busy (User)* CPU Busy (System)* CPU Busy (IO Wait)* CPU Busy (Total)* Run Queue Length* Run Queue Occupancy* Forks per second* Execs per second* Processes Reading* Processes Writing* Processes Blocked* Pages per Second
-### Languages Used: * Java
+### Input Variables: * Username (Windows credentials)* Password
+### Output Variables: * Requests Active* Requests Queued* Requests Timed out Total* Active Queue Length* Idle Threads* Threads Accessing Network* Filtering Threads* Threads In Plug-Ins* Crawls in progress
+### Languages Used: * VBScript
 
