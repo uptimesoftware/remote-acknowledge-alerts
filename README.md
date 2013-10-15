@@ -1,5 +1,5 @@
-# Remote Acknowledge Alerts
-## Tags : plugin   alerts  
+# Server Performance Metrics
+## Tags : plugin   deprecated  
 
 ## Category: plugin
 
@@ -7,50 +7,23 @@
 
 
   
-    * Remote Acknowledge Alerts 2.1 - 7.1, 7.0, 6.0, 5.5
+    * Server Performance Metrics 1.1 - 5.5, 5.4, 5.3
+  
+
+  
+    * Server Performance Metrics 1.0 - 5.3
   
 
 
-### Description: Allows alerts to be acknowledged remotely from an alert email via a quick web page (login not required). It acknowledges the alert using the built-in API.
+### Description: Monitor core system metrics. This is now in up.time 6 as the built-in Performance check monitor. Please use the Performance Monitor in up.time 6+ for this functionality instead.
 
-### Supported Monitoring Stations: 7.1, 7.0, 6.0, 5.5
+### Supported Monitoring Stations: 7.2, 7.1
 ### Supported Agents: None; no agent required
-### Installation Notes: <p><a href="https://github.com/uptimesoftware/uptime-plugin-manager">Install using the up.time Plugin Manager</a></p>
-
-<ol>
-<li>Edit the file [uptime_dir]\GUI\ack\ack.php by providing the following:</li>
-</ol>
-
-
-<p>///////////////////////////////////////////////////////////////
-// up.time username and password settings for the acknowledgement to function
-$user = 'admin';
-$pass = 'admin';
-$uptime_hostname = 'uptimeserver.company.com';
-///////////////////////////////////////////////////////////////</p>
-
-<p>...where $user &amp; $pass is the credential used to acknowledge the alert.
-$uptime_hostname is the up.time monitoring station</p>
-
-<ol>
-<li>Configure Alert Profile</li>
-</ol>
-
-
-<p>Edit an alert profile and include the following link:</p>
-
-<p>http://[UPTIME_HOSTNAME]/ack/ack.php?host=$HOSTNAME$&amp;monitor=$SERVICENAME$&amp;status=$SERVICESTATE$&amp;msg=$OUTPUT$</p>
-
-<p>Note: Substitute "[UPTIME_HOSTNAME]" for the external IP/hostname of the up.time interface (the other values should not be modified; they will be updated when the alert profile is triggered).
-You can also place it on an external web server if required.</p>
-
-<p>If the monitor name and/or alert message have spaces, one should also install the Enhanced Alert Profile Variables. Replace the above URL in the alert profile with the following:</p>
-
-<p>http://[UPTIME_HOSTNAME]/ack/ack.php?host=$HOSTNAME$&amp;monitor=$URLSERVICENAME$&amp;status=$SERVICESTATE$&amp;msg=$URLOUTPUT$</p>
+### Installation Notes: <p>Manual copy into "core" directory</p>
 
 ### Dependencies: <p>n/a</p>
 
-### Input Variables: 
-### Output Variables: 
-### Languages Used: * PHP
+### Input Variables: * none; retrieves latest values from up.time database internally via uptime core
+### Output Variables: * Free Memory (KB)* Free Swap (KB)* Free Memory (%)* CPU Busy (User)* CPU Busy (System)* CPU Busy (IO Wait)* CPU Busy (Total)* Run Queue Length* Run Queue Occupancy* Forks per second* Execs per second* Processes Reading* Processes Writing* Processes Blocked* Pages per Second
+### Languages Used: * Java
 
