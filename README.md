@@ -7,13 +7,13 @@ See http://uptimesoftware.github.io for more information.
 
 ### Category
 
-{ page.category }}
+plugin
 
 ### Version Compatibility
 
 
   
-    * Remote Acknowledge Alerts 2.1 - 7.1, 7.0, 6.0, 5.5
+* Remote Acknowledge Alerts 2.1 - 7.1, 7.0, 6.0, 5.5
   
 
 
@@ -75,5 +75,6 @@ You can also place it on an external web server if required.</p>
 
 
 ### Languages Used
+
 * PHP
 
