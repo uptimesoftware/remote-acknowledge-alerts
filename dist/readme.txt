@@ -34,7 +34,7 @@ CONFIGURE ALERTS TO INCLUDE LINK
 Now that the functionality is installed, we can simply configure all the alerts to include the new link.
 
 - Edit an alert profile and include the following link:
-http://<UPTIME_HOSTNAME>/ack.php?host=$HOSTNAME$&monitor=$SERVICENAME$&status=$SERVICESTATE$&msg=$OUTPUT$
+http://<UPTIME_HOSTNAME>/ack.php?host=$HOSTNAME$&monitor=$URL_ENCODE_SERVICE_NAME$&status=$SERVICESTATE$&msg=$URL_OUTPUT$
 
 Note: Substitute the "<UPTIME_HOSTNAME>" for the external IP/hostname of the up.time interface (the other values should not be modified; they will be updated when the alert profile is triggered).
 You can also place it on an external web server if required.
